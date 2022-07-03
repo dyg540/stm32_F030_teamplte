@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "testapp.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-testapp.elf-Debug-d4446b87b70f82cdab09.json",
+					"jsonFile" : "target-testapp.elf-Debug-03598a256cfb3538d0c1.json",
 					"name" : "testapp.elf",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/jeams/docker_files/workspace/stm32_F030_template/build",
-		"source" : "/Users/jeams/docker_files/workspace/stm32_F030_template"
+		"build" : "/home/jeams/workspace/stm32_F030_template/build",
+		"source" : "/home/jeams/workspace/stm32_F030_template"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 0
 	}
 }

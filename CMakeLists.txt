@@ -18,7 +18,7 @@ set(SIZE ${tools}/bin/arm-none-eabi-size)
 #set(CMAKE_CXX_LINK_EXECUTABLE ld)
 
 #头文件
-include_directories("/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include" "/fwlibs/inc" "/CMSIS")
+include_directories("/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include" "fwlibs/inc" "CMSIS")
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
@@ -34,7 +34,7 @@ enable_language(C ASM)
 #set(CMAKE_C_STANDARD 11)
 
 file(GLOB_RECURSE SOURCES "src/*.*" "startup/*.*" "hwlibs/*.*" "fwlibs/*.*" "CMSIS/*.*")
-set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F030F4Px_FLASH.ld)
+set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32_flash.ld)
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
  
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)

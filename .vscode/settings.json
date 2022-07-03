@@ -4,6 +4,9 @@
         "stdio.h": "c",
         "delay.h": "c",
         "core_cm0.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "core_cminstr.h": "c",
+        "core_cmfunc.h": "c",
+        "stm32f0xx_adc.h": "c"
     }
 }
