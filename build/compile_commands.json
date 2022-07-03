@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/jeams/workspace/testapp/build",
-  "command": "/opt/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -g   -o CMakeFiles/test1.dir/src/main.c.o   -c /home/jeams/workspace/testapp/src/main.c",
-  "file": "/home/jeams/workspace/testapp/src/main.c"
-}
-]
