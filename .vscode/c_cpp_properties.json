@@ -3,9 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/fwlibs",
-                "${workspaceFolder}/hwlibs"
+                "${workspaceFolder}/**"
             ],
             "defines": [],
             "compilerPath": "/opt/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc",

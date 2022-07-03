@@ -2,6 +2,8 @@
     "files.associations": {
         "stm32f0xx.h": "c",
         "stdio.h": "c",
-        "delay.h": "c"
+        "delay.h": "c",
+        "core_cm0.h": "c",
+        "stdint.h": "c"
     }
 }

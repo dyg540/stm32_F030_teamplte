@@ -17,7 +17,9 @@ set(SIZE ${tools}/bin/arm-none-eabi-size)
 #set(CMAKE_C_LINK_EXECUTABLE ld)
 #set(CMAKE_CXX_LINK_EXECUTABLE ld)
 
-include_directories("/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include")
+#头文件
+include_directories("/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include" "/fwlibs/inc" "/CMSIS")
+
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
