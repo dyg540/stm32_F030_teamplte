@@ -17,6 +17,7 @@ set(SIZE ${tools}/bin/arm-none-eabi-size)
 #set(CMAKE_C_LINK_EXECUTABLE ld)
 #set(CMAKE_CXX_LINK_EXECUTABLE ld)
 
+
 #头文件
 include_directories("/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include" "fwlibs/inc" "CMSIS")
 
@@ -32,6 +33,13 @@ project(testapp LANGUAGES C ASM)
 enable_language(C ASM)
 #set(CMAKE_CXX_STANDARD 17)
 #set(CMAKE_C_STANDARD 11)
+
+add_compile_options(-mcpu=cortex-m4 -mthumb -mthumb-interwork)
+add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0)
+
+#设置值宏定义
+add_definitions(-D STM32F030x6)
+
 
 file(GLOB_RECURSE SOURCES "src/*.*" "startup/*.*" "hwlibs/*.*" "fwlibs/*.*" "CMSIS/*.*")
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32_flash.ld)
