@@ -26,8 +26,8 @@ set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
-#set(CMAKE_EXE_LINKER_FLAGS "--specs=nano.specs")
-#set(CMAKE_EXE_LINKER_FLAGS "--specs=nosys.specs") 
+set(CMAKE_EXE_LINKER_FLAGS "--specs=nano.specs")
+set(CMAKE_EXE_LINKER_FLAGS "--specs=nosys.specs") 
 
 project(testapp LANGUAGES C ASM)
 enable_language(C ASM)
