@@ -56,7 +56,7 @@ add_definitions(-D STM32F030X6)
 file(GLOB_RECURSE SOURCES "src/*.*" "hwlibs/*.*" "fwlibs/*.*" "CMSIS/*.*")
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/stm32_flash.ld)
 #set(STARTUP_FILE ${CMAKE_SOURCE_DIR}/startup/startup_stm32f0xx.s) ## 启动文件.s
-add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT}) ## ${CMAKE_SOURCE_DIR}
+add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT}) ## ${TARTUP_FILE}
  
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)
