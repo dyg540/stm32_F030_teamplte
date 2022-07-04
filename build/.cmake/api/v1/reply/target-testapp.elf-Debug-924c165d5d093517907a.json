@@ -55,19 +55,15 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g   -D STM32F030X6"
+					"fragment" : "-g -Wall   -D STM32F030X6"
 				},
 				{
 					"backtrace" : 2,
-					"fragment" : "-mcpu=cortex-m3"
+					"fragment" : "-mcpu=cortex-m0"
 				},
 				{
 					"backtrace" : 2,
 					"fragment" : "-mthumb"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-mthumb-interwork"
 				},
 				{
 					"backtrace" : 3,
@@ -125,65 +121,6 @@
 				50,
 				52
 			]
-		},
-		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : "-g   -D STM32F030X6"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-mcpu=cortex-m3"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-mthumb"
-				},
-				{
-					"backtrace" : 2,
-					"fragment" : "-mthumb-interwork"
-				},
-				{
-					"backtrace" : 3,
-					"fragment" : "-ffunction-sections"
-				},
-				{
-					"backtrace" : 3,
-					"fragment" : "-fdata-sections"
-				},
-				{
-					"backtrace" : 3,
-					"fragment" : "-fno-common"
-				},
-				{
-					"backtrace" : 3,
-					"fragment" : "-fmessage-length=0"
-				}
-			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 4,
-					"path" : "/opt/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include"
-				},
-				{
-					"backtrace" : 4,
-					"path" : "/home/jeams/workspace/stm32_F030_template/fwlibs/inc"
-				},
-				{
-					"backtrace" : 4,
-					"path" : "/home/jeams/workspace/stm32_F030_template/CMSIS"
-				}
-			],
-			"language" : "ASM",
-			"sourceIndexes" : 
-			[
-				53,
-				54,
-				55,
-				56
-			]
 		}
 	],
 	"id" : "testapp.elf::@6890427a1f51a3e7e1df",
@@ -192,11 +129,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-g -Wall",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "--specs=nosys.specs",
+				"fragment" : "-static -Wl,-cref,-u,Reset_Handler -Wl,-Map=testapp.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group,-print-memory-usage --specs=nano.specs --specs=nosys.specs",
 				"role" : "flags"
 			}
 		],
@@ -280,11 +217,7 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				53,
-				54,
-				55,
-				56,
-				57
+				53
 			]
 		}
 	],
@@ -578,30 +511,6 @@
 			"compileGroupIndex" : 0,
 			"path" : "src/main.c",
 			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "startup/startup_stm32f030x6.s",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "startup/startup_stm32f030x8.s",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "startup/startup_stm32f0xx.s",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 1,
-			"path" : "startup/startup_stm32f0xx_ld.s",
-			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
